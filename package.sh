@@ -3,7 +3,7 @@ START_TIME=$SECONDS
 
 echo "Building package..."
 rm -r lib
-tsc
+npx tsc
 rm -r package
 mkdir package
 
@@ -12,7 +12,7 @@ cp -r lib package/lib
 cp package.json README.md LICENSE package
 
 echo "Making package.json public..."
-sed -i 's/"private": true/"private": false/' ./package/package.json
+sed -i '' -e 's/"private": true/"private": false/' ./package/package.json
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 echo "Done in $ELAPSED_TIME seconds!"
