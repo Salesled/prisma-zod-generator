@@ -1,7 +1,7 @@
 #!/bin/bash
 START_TIME=$SECONDS
 
-echo "Buidling package..."
+echo "Building package..."
 rm -r lib
 tsc
 rm -r package
